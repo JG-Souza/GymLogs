@@ -18,4 +18,35 @@ model User {
   id Int @id @default(autoincrement())
   email String @unique
   password String 
+  treinos Treino[]
+}
+
+model Treino {
+  id Int @id @default(autoincrement())
+  nome String 
+  data DateTime @default(now())
+  horaInicio DateTime @default(now())
+  horaFim DateTime?
+  notas String
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+  exercicios Exercicio[]
+}
+
+model Exercicio {
+  id Int @id @default(autoincrement())
+  categoria String
+  nome String
+  notas String
+  treinoId Int
+  treino Treino @relation(fields: [treinoId], references: [id])
+  series Serie[]
+}
+
+model Serie {
+  id Int @id @default(autoincrement())
+  peso Float
+  repeticao Int
+  exercicioId Int
+  exercicio Exercicio @relation(fields: [exercicioId], references: [id])
 }
