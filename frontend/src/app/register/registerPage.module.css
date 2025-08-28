@@ -1,0 +1,108 @@
+/* frontend/src/app/register/registerPage.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a2e; /* Base escura */
+  background-image: linear-gradient(135deg, #1a1a2e 0%, #0c0c16 100%);
+  font-family: 'Arial', sans-serif;
+  color: #e9ecef;
+}
+
+.box {
+  background-color: rgba(26, 26, 46, 0.8);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-image: linear-gradient(to bottom, rgba(43, 43, 67, 0.6), rgba(26, 26, 46, 0.6));
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #66fcf1;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 10px rgba(102, 252, 241, 0.3);
+}
+
+.formField {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #c5c6c7;
+}
+
+.input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: #0b0c10;
+  border: 1px solid #45a29e;
+  border-radius: 8px;
+  color: #e9ecef;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-color: #66fcf1;
+  box-shadow: 0 0 15px rgba(102, 252, 241, 0.7);
+  background-color: #1a1a2e;
+}
+
+.buttonContainer {
+  margin-top: 2.5rem;
+}
+
+.button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #66fcf1;
+  border: none;
+  border-radius: 8px;
+  color: #0b0c10;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.4);
+}
+
+.button:hover {
+  background-color: #45a29e;
+  box-shadow: 0 5px 20px rgba(69, 162, 158, 0.6);
+  transform: translateY(-2px);
+}
+
+.button:disabled {
+  background-color: #495057;
+  color: #adb5bd;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.message {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.success {
+  color: #45a29e;
+  text-shadow: 0 0 5px rgba(69, 162, 158, 0.8);
+}
+
+.error {
+  color: #ff5757;
+  text-shadow: 0 0 5px rgba(255, 87, 87, 0.8);
+}
